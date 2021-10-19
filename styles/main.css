@@ -149,27 +149,31 @@ body {
   position: relative;
   z-index: -1;
   overflow: hidden;
-  background: #120fc5;
+  background: #141414;
 }
 
 .location-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.5;
+  opacity: 0.3;
+  filter: blur(1px);
 }
 
 .weather-card {
   position: absolute;
   height: fit-content;
   width: 400px;
-  background-color: rgba(255, 255, 255, 0.829);
+  background-color: rgba(3, 180, 224, 0.671);
   border-radius: 20px;
   box-shadow: 9px 10px 53px -8px rgba(0, 0, 0, 0.49);
   -webkit-box-shadow: 9px 10px 53px -8px rgba(0, 0, 0, 0.49);
   -moz-box-shadow: 9px 10px 53px -8px rgba(0, 0, 0, 0.49);
   padding: 40px;
   box-sizing: border-box;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  color: white;
 }
 
 .weather-card .place-wrap .place {

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <script src="scripts/geolocation.js"></script>
+</head>
+
+<body>
+  <div class="location-image">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Chennai_-_bird%27s-eye_view.jpg/800px-Chennai_-_bird%27s-eye_view.jpg"
+      alt="Chennai, India">
+  </div>
+  <div class="weather-card">
+    <div class="place-wrap"><span>Current Weather in</span>
+      <div class="place" id="location"></div>
+      </p>
+    </div>
+    <div id="weather-info" class="weather-info">
+      <img src="" id="condition-ico" class="condition-ico" alt="">
+      <p class="weather-condition"><span id="condition"></span></p>
+      <span class="temperature" id="temperature">
+      </span><span class="deg">°C</span>
+      <p>Humidity: <span id="humidity"></span>%</p>
+      <p>Precipitation: <span id="precipitation"></span></p>
+      <p>Pressure: <span id="pressure"></span></p>
+      <p>Wind: <span id="wind"></span></p>
+    </div>
+    <div class="lastupdated">Updated on <br><span id=last-update></span></div>
+  </div>
+
+</body>
+
+</html>

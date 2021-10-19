@@ -1,0 +1,222 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.location-image {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: -1;
+  overflow: hidden;
+  background: #120fc5;
+}
+
+.location-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+.weather-card {
+  position: absolute;
+  height: fit-content;
+  width: 400px;
+  background-color: rgba(255, 255, 255, 0.829);
+  border-radius: 20px;
+  box-shadow: 9px 10px 53px -8px rgba(0, 0, 0, 0.49);
+  -webkit-box-shadow: 9px 10px 53px -8px rgba(0, 0, 0, 0.49);
+  -moz-box-shadow: 9px 10px 53px -8px rgba(0, 0, 0, 0.49);
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.weather-card .place-wrap .place {
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.weather-card .weather-info {
+  padding-top: 20px;
+}
+
+.weather-card .weather-info .condition-ico {
+  position: absolute;
+  right: 20px;
+  height: 100px;
+  width: auto;
+}
+
+.weather-card .weather-info p {
+  margin-top: 5px;
+  font-weight: 400;
+}
+
+.weather-card .weather-info p span {
+  font-weight: 500;
+}
+
+.weather-card .weather-info .weather-condition {
+  font-size: 21px;
+}
+
+.weather-card .weather-info .temperature {
+  font-size: 120px;
+  font-weight: 400;
+}
+
+.weather-card .weather-info .deg {
+  position: relative;
+  bottom: 60px;
+  font-size: 30px;
+}
+
+.weather-card .lastupdated {
+  margin-top: 30px;
+}
+
+.weather-card .lastupdated span {
+  font-weight: 500;
+}
+/*# sourceMappingURL=main.css.map */

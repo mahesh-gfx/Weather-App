@@ -1,0 +1,55 @@
+.weather-card {
+  position: absolute;
+  height: fit-content;
+  width: 400px;
+  background-color: rgba(255, 255, 255, 0.829);
+  border-radius: 20px;
+  box-shadow: 9px 10px 53px -8px rgba(0, 0, 0, 0.49);
+  -webkit-box-shadow: 9px 10px 53px -8px rgba(0, 0, 0, 0.49);
+  -moz-box-shadow: 9px 10px 53px -8px rgba(0, 0, 0, 0.49);
+  padding: 40px;
+  box-sizing: border-box;
+  .place-wrap {
+    .place {
+      font-size: 26px;
+      font-weight: 500;
+    }
+  }
+
+  .weather-info {
+    padding-top: 20px;
+
+    .condition-ico {
+      position: absolute;
+      right: 20px;
+      height: 100px;
+      width: auto;
+    }
+    p {
+      margin-top: 5px;
+      font-weight: 400;
+      span {
+        font-weight: 500;
+      }
+    }
+    .weather-condition {
+      font-size: 21px;
+    }
+    .temperature {
+      font-size: 120px;
+      font-weight: 400;
+    }
+    .deg {
+      position: relative;
+      bottom: 60px;
+      font-size: 30px;
+    }
+  }
+
+  .lastupdated {
+    margin-top: 30px;
+    span {
+      font-weight: 500;
+    }
+  }
+}

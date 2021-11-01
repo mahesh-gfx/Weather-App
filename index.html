@@ -8,7 +8,7 @@
   <title>Weather App</title>
   <link rel="stylesheet" href="styles/main.css">
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-  <script src="scripts/geolocation.js"></script>
+  <script defer src="scripts/app.js"></script>
 </head>
 
 <body>
@@ -17,16 +17,33 @@
       src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Chennai_-_bird%27s-eye_view.jpg/800px-Chennai_-_bird%27s-eye_view.jpg"
       alt="Chennai, India">
   </div>
+  <div class="search-bar">
+    <form method="POST" class="search-form" onsubmit="return false">
+      <label for="search">
+        <input type="text" placeholder="Search" name="search" id="search">
+        <button type="submit" id="search-query"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25"
+            height="25" viewBox="0 0 30 30" style=" fill:rgb(172, 172, 172);">
+            <path
+              d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 A 1.0001 1.0001 0 1 0 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z">
+            </path>
+          </svg></button>
+      </label>
+
+    </form>
+
+  </div>
   <div class="weather-card">
     <div class="place-wrap"><span>Current Weather in</span>
       <div class="place" id="location"></div>
       </p>
     </div>
     <div id="weather-info" class="weather-info">
-      <img src="" id="condition-ico" class="condition-ico" alt="">
+
       <p class="weather-condition"><span id="condition"></span></p>
-      <span class="temperature" id="temperature">
-      </span><span class="deg">°C</span>
+      <div class="temp-wrap">
+        <span class="temperature" id="temperature">
+        </span><span class="deg">°C</span><img src="" id="condition-ico" class="condition-ico" alt="">
+      </div>
       <p>Humidity: <span id="humidity"></span>%</p>
       <p>Precipitation: <span id="precipitation"></span></p>
       <p>Pressure: <span id="pressure"></span></p>

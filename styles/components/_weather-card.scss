@@ -13,6 +13,8 @@
   -webkit-backdrop-filter: blur(4px);
   color: white;
   .place-wrap {
+    width: 75%;
+    margin: 0;
     .place {
       font-size: 26px;
       font-weight: 500;
@@ -24,7 +26,7 @@
 
     .condition-ico {
       position: absolute;
-      right: 20px;
+      right: 25px;
       height: 100px;
       width: auto;
     }
@@ -38,14 +40,16 @@
     .weather-condition {
       font-size: 21px;
     }
-    .temperature {
-      font-size: 120px;
-      font-weight: 400;
-    }
-    .deg {
-      position: relative;
-      bottom: 60px;
-      font-size: 30px;
+    .temp-wrap {
+      .temperature {
+        font-size: 100px;
+        font-weight: 400;
+      }
+      .deg {
+        position: relative;
+        bottom: 60px;
+        font-size: 30px;
+      }
     }
   }
 

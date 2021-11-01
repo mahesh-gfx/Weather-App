@@ -156,7 +156,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.3;
+  opacity: 0.4;
   filter: blur(1px);
 }
 
@@ -176,6 +176,11 @@ body {
   color: white;
 }
 
+.weather-card .place-wrap {
+  width: 75%;
+  margin: 0;
+}
+
 .weather-card .place-wrap .place {
   font-size: 26px;
   font-weight: 500;
@@ -187,7 +192,7 @@ body {
 
 .weather-card .weather-info .condition-ico {
   position: absolute;
-  right: 20px;
+  right: 25px;
   height: 100px;
   width: auto;
 }
@@ -205,12 +210,12 @@ body {
   font-size: 21px;
 }
 
-.weather-card .weather-info .temperature {
-  font-size: 120px;
+.weather-card .weather-info .temp-wrap .temperature {
+  font-size: 100px;
   font-weight: 400;
 }
 
-.weather-card .weather-info .deg {
+.weather-card .weather-info .temp-wrap .deg {
   position: relative;
   bottom: 60px;
   font-size: 30px;
@@ -222,5 +227,40 @@ body {
 
 .weather-card .lastupdated span {
   font-weight: 500;
+}
+
+.search-bar {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+}
+
+.search-bar form label {
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 2px solid #acacac;
+}
+
+.search-bar form label input {
+  width: 250px;
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  background: none;
+  outline: none;
+  color: #acacac;
+}
+
+.search-bar form label input::placeholder {
+  color: #acacac;
+}
+
+.search-bar form label button {
+  background: none;
+  outline: none;
+  border: none;
+  padding: 0;
 }
 /*# sourceMappingURL=main.css.map */

@@ -18,7 +18,7 @@
       alt="Chennai, India">
   </div>
   <div class="search-bar">
-    <form method="POST" class="search-form" onsubmit="return false">
+    <form method="POST" class="search-form" onsubmit="return false;">
       <label for="search">
         <input type="text" placeholder="Search" name="search" id="search">
         <button type="submit" id="search-query"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25"
@@ -32,25 +32,52 @@
     </form>
 
   </div>
-  <div class="weather-card">
-    <div class="place-wrap"><span>Current Weather in</span>
-      <div class="place" id="location"></div>
-      </p>
-    </div>
-    <div id="weather-info" class="weather-info">
-
-      <p class="weather-condition"><span id="condition"></span></p>
-      <div class="temp-wrap">
-        <span class="temperature" id="temperature">
-        </span><span class="deg">°C</span><img src="" id="condition-ico" class="condition-ico" alt="">
+  <div class="weather-card-wrap">
+    <div class="weather-card">
+      <div class="place-wrap"><span>Current Weather in</span>
+        <div class="place" id="location"></div>
+        </p>
       </div>
-      <p>Humidity: <span id="humidity"></span>%</p>
-      <p>Precipitation: <span id="precipitation"></span></p>
-      <p>Pressure: <span id="pressure"></span></p>
-      <p>Wind: <span id="wind"></span></p>
+      <div id="weather-info" class="weather-info">
+
+        <p class="weather-condition"><span id="condition"></span></p>
+        <div class="temp-wrap">
+          <span class="temperature" id="temperature">
+          </span><span class="deg">°C</span><img src="" id="condition-ico" class="condition-ico" alt="">
+        </div>
+        <p>Humidity: <span id="humidity"></span>%</p>
+        <p>Precipitation: <span id="precipitation"></span></p>
+        <p>Pressure: <span id="pressure"></span></p>
+        <p>Wind: <span id="wind"></span></p>
+      </div>
+
+      <div class="lastupdated">Updated on <br><span id=last-update></span></div>
     </div>
-    <div class="lastupdated">Updated on <br><span id=last-update></span></div>
+    <div class="forecast">
+      <div class="forecast-data" id="forecast-data">
+        <div class="forecast-day-card">
+          <div class="day">Mon</div>
+        </div>
+        <div class="forecast-day-card">
+          <div class="day">Tue</div>
+        </div>
+        <div class="forecast-day-card">
+          <div class="day">Wed</div>
+        </div>
+        <div class="forecast-day-card">
+          <div class="day">Thu</div>
+        </div>
+        <div class="forecast-day-card">
+          <div class="day">Fri</div>
+        </div>
+        <div class="forecast-day-card">
+          <div class="day">Sat</div>
+        </div>
+      </div>
+
+    </div>
   </div>
+
 
 </body>
 

@@ -33,9 +33,12 @@ function error(err) {
 }
 
 function weatherAPI(location) {
-  var url = `http://api.weatherapi.com/v1/current.json?key=981c56aab5ba4484a7a105826210109&q=${location}`;
-  //Weather API Call
-  fetch(url)
+  var days = 6;
+  var urlForLive = `http://api.weatherapi.com/v1/current.json?key=981c56aab5ba4484a7a105826210109&q=${location}`;
+  var urlForForecast = `http://api.weatherapi.com/v1/forecast.json?key=981c56aab5ba4484a7a105826210109&q=${location}&days=${days}`;
+
+  //Weather API Call for Current Weather
+  fetch(urlForLive)
     .then(function (response) {
       return response.json();
     })
@@ -60,6 +63,16 @@ function weatherAPI(location) {
         " direction.";
       document.getElementById("pressure").innerHTML =
         " " + data.current.pressure_mb + " millibars";
+    });
+
+  //Weather API call for Forecast
+  fetch(urlForForecast)
+    .then(function (response) {
+      return response.json();
+    })
+    .then((data) => {
+      console.log("Forecast");
+      console.log({ data });
     });
 }
 

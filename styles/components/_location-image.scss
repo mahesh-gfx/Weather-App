@@ -1,7 +1,9 @@
 .location-image {
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: -1;
   overflow: hidden;
   background: rgb(20, 20, 20);

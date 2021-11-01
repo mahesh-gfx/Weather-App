@@ -33,9 +33,8 @@ function error(err) {
 }
 
 function weatherAPI(location) {
-  var days = 6;
   var urlForLive = `http://api.weatherapi.com/v1/current.json?key=981c56aab5ba4484a7a105826210109&q=${location}`;
-  var urlForForecast = `http://api.weatherapi.com/v1/forecast.json?key=981c56aab5ba4484a7a105826210109&q=${location}&days=${days}`;
+  var urlForForecast = `http://api.weatherapi.com/v1/forecast.json?key=981c56aab5ba4484a7a105826210109&q=${location}&days=6`;
 
   //Weather API Call for Current Weather
   fetch(urlForLive)
@@ -71,8 +70,50 @@ function weatherAPI(location) {
       return response.json();
     })
     .then((data) => {
-      console.log("Forecast");
+      console.log(`Forecast for ${location}`);
       console.log({ data });
+      var forecastData = data.forecast.forecastday;
+      var forecastBody = document.getElementById("forecast-data");
+      var days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+      forecastBody.innerHTML = "";
+
+      for (i = 0; i < forecastData.length; i++) {
+        var forecastDayCard = document.createElement("div");
+        forecastDayCard.setAttribute("class", "forecast-day-card");
+
+        var forecastDay = document.createElement("div");
+        forecastDay.setAttribute("class", "forecast-day");
+        var dateString = forecastData[i].date;
+        var d = new Date(dateString);
+        var dayName = days[d.getDay()];
+        console.log(dayName);
+        forecastDay.innerText = dayName;
+
+        var tempContainer = document.createElement("div");
+        tempContainer.setAttribute("class", "temp-container");
+
+        var forecastTempMax = document.createElement("div");
+        forecastTempMax.setAttribute("class", "forecast-temp-max");
+        forecastTempMax.innerText =
+          "Max: " + forecastData[i].day.maxtemp_c + " °C";
+
+        var forecastTempMin = document.createElement("div");
+        forecastTempMin.setAttribute("class", "forecast-temp-min");
+        forecastTempMin.innerText =
+          "Min: " + forecastData[i].day.mintemp_c + " °C";
+
+        var forecastCondition = document.createElement("img");
+        forecastCondition.setAttribute("class", "weather-condition-icon");
+        forecastCondition.src = forecastData[i].day.condition.icon;
+
+        forecastDayCard.append(forecastDay);
+        tempContainer.append(forecastTempMax);
+        tempContainer.append(forecastTempMin);
+        forecastDayCard.append(tempContainer);
+        forecastDayCard.append(forecastCondition);
+        forecastBody.append(forecastDayCard);
+      }
+      console.log(urlForForecast);
     });
 }
 

@@ -137,9 +137,15 @@ table {
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -157,19 +163,28 @@ body {
 .location-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   opacity: 0.4;
-  filter: blur(1px);
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
 }
 
 .weather-card-wrap {
   position: absolute;
   top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .weather-card-wrap .weather-card {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   width: 400px;
   background-color: rgba(3, 180, 224, 0.671);
@@ -178,7 +193,8 @@ body {
   -webkit-box-shadow: 9px 10px 53px -8px rgba(0, 0, 0, 0.49);
   -moz-box-shadow: 9px 10px 53px -8px rgba(0, 0, 0, 0.49);
   padding: 40px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   color: white;
@@ -251,15 +267,24 @@ body {
 
 .weather-card-wrap .forecast .forecast-data {
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .weather-card-wrap .forecast .forecast-data .forecast-day-card {
   height: 60px;
   width: 260px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: rgba(3, 180, 224, 0.158);
   border-radius: 20px;
   box-shadow: 9px 10px 53px -8px rgba(0, 0, 0, 0.49);
@@ -267,7 +292,8 @@ body {
   -moz-box-shadow: 9px 10px 53px -8px rgba(0, 0, 0, 0.49);
   padding: 22px;
   margin-bottom: 10px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   color: white;
@@ -285,20 +311,32 @@ body {
 
 @media only screen and (max-width: 768px) {
   .weather-card-wrap {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .weather-card-wrap .forecast {
     margin: 20px 0;
   }
   .weather-card-wrap .forecast .forecast-data {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .weather-card-wrap .forecast .forecast-data .forecast-day-card {
     width: 100%;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding-left: 50px;
   }
 }
@@ -311,9 +349,16 @@ body {
 
 .search-bar form label {
   width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-bottom: 2px solid #acacac;
 }
 
@@ -327,6 +372,18 @@ body {
   color: #f1f1f1;
 }
 
+.search-bar form label input::-webkit-input-placeholder {
+  color: #acacac;
+}
+
+.search-bar form label input:-ms-input-placeholder {
+  color: #acacac;
+}
+
+.search-bar form label input::-ms-input-placeholder {
+  color: #acacac;
+}
+
 .search-bar form label input::placeholder {
   color: #acacac;
 }
@@ -336,5 +393,9 @@ body {
   outline: none;
   border: none;
   padding: 0;
+}
+
+.search-bar form label button:hover {
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */
